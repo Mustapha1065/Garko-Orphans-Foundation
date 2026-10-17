@@ -1,0 +1,21 @@
+CREATE TABLE IF NOT EXISTS volunteer_applications (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    first_name VARCHAR(100) NOT NULL,
+    last_name VARCHAR(100) NOT NULL,
+    email VARCHAR(150) NOT NULL,
+    phone VARCHAR(20),
+    address TEXT,
+    age INT,
+    occupation VARCHAR(100),
+    skills TEXT,
+    interest VARCHAR(100),
+    availability VARCHAR(50),
+    motivation TEXT,
+    experience TEXT,
+    status ENUM('pending', 'reviewed', 'approved', 'rejected', 'contacted') DEFAULT 'pending',
+    reviewed_by INT,
+    reviewed_at DATETIME NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    INDEX idx_status (status)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

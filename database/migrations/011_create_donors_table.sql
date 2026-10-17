@@ -1,0 +1,22 @@
+CREATE TABLE IF NOT EXISTS donors (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    gof_id VARCHAR(20) UNIQUE,
+    user_id INT,
+    name VARCHAR(200) NOT NULL,
+    organization_name VARCHAR(200),
+    donor_type ENUM('individual', 'organization') DEFAULT 'individual',
+    email VARCHAR(150),
+    phone VARCHAR(20),
+    address TEXT,
+    city VARCHAR(100),
+    state VARCHAR(100),
+    country VARCHAR(100) DEFAULT 'Nigeria',
+    notes TEXT,
+    status ENUM('active', 'inactive') DEFAULT 'active',
+    registration_date DATE,
+    registered_by INT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    INDEX idx_status (status),
+    INDEX idx_gof_id (gof_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

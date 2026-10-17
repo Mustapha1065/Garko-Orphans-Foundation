@@ -1,0 +1,7 @@
+-- Legacy combined seed intentionally retired.
+-- Canonical seed files are:
+-- 001_seed_roles.sql
+-- 002_seed_permissions.sql
+-- 003_seed_role_permissions.sql
+-- 004_seed_super_admin.sql
+-- 005_seed_settings.sql

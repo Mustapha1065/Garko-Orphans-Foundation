@@ -1,0 +1,26 @@
+{
+    "name": "gof/gof2",
+    "description": "Garko Orphans Foundation NGO Management Platform",
+    "type": "project",
+    "require": {
+        "php": "^8.0",
+        "endroid/qr-code": "^4.8",
+        "dompdf/dompdf": "^2.0",
+        "phpmailer/phpmailer": "^6.0",
+        "ramsey/uuid": "^4.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "GOF\\": "app/"
+        }
+    },
+    "config": {
+        "allow-plugins": true,
+        "platform-check": false
+    },
+    "authors": [
+        {
+            "name": "GOF"
+        }
+    ]
+}

@@ -1,0 +1,12 @@
+CREATE TABLE IF NOT EXISTS settings (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    group_name VARCHAR(50) NOT NULL DEFAULT 'general',
+    key_name VARCHAR(100) NOT NULL UNIQUE,
+    value TEXT,
+    type VARCHAR(20) NOT NULL DEFAULT 'string',
+    is_public TINYINT(1) NOT NULL DEFAULT 0,
+    updated_by INT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    INDEX idx_group_name (group_name)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

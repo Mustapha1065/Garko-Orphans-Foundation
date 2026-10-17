@@ -1,0 +1,47 @@
+GOF3-LIGHT - ONE-CLICK XAMPP INSTALLATION
+==========================================
+
+REQUIREMENTS
+------------
+- Windows
+- XAMPP installed at C:\xampp
+- PHP 8.x (the included XAMPP PHP is used)
+- MySQL/MariaDB running through XAMPP
+- Internet access on the first installation if Composer is not already installed
+
+INSTALLATION
+------------
+1. Extract the ZIP into C:\xampp\htdocs\
+2. The folder must be:
+   C:\xampp\htdocs\GOF3-light\
+3. Double-click:
+   START-GOF3-light.bat
+
+The installer automatically:
+- Starts/checks XAMPP MySQL
+- Downloads Composer locally if needed
+- Installs PHP dependencies from composer.lock
+- Creates the gof3light database
+- Runs all database migrations
+- Seeds roles and permissions
+- Creates/repairs the Super Admin
+- Opens the application in your browser
+
+LOGIN
+-----
+Email:    admin@gof.org.ng
+Password: Admin@1234
+
+After first login, change the password from the profile/password screen.
+
+APPLICATION
+-----------
+http://localhost/GOF3-light/public/
+
+IMPORTANT
+---------
+The installer expects the standard XAMPP installation path C:\xampp and a
+MySQL root account with an empty password. If your XAMPP installation uses
+a different MySQL password/path, edit .env or the installer before running.
+
+Do not delete the database migrations. They are the application's schema source.

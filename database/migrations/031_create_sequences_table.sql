@@ -1,0 +1,5 @@
+CREATE TABLE IF NOT EXISTS sequences (
+    name VARCHAR(80) NOT NULL,
+    last_val BIGINT UNSIGNED NOT NULL DEFAULT 0,
+    PRIMARY KEY (name)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

@@ -1,0 +1,20 @@
+CREATE TABLE IF NOT EXISTS staff (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT,
+    gof_id VARCHAR(20) UNIQUE,
+    full_name VARCHAR(200) NOT NULL,
+    phone VARCHAR(20),
+    department VARCHAR(100),
+    position VARCHAR(100),
+    employment_type VARCHAR(50),
+    employment_date DATE,
+    emergency_contact_name VARCHAR(100),
+    emergency_contact_phone VARCHAR(20),
+    status ENUM('active', 'inactive', 'suspended') DEFAULT 'active',
+    photo VARCHAR(255),
+    created_by INT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    INDEX idx_status (status),
+    INDEX idx_gof_id (gof_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

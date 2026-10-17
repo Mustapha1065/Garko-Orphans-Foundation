@@ -1,0 +1,38 @@
+# PHP
+vendor/
+composer.lock
+.env
+.env.*.php
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+storage/logs/*.log
+*.log
+
+# Temporary files
+*.tmp
+*.bak
+.cache/
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Uploads (but keep directory)
+public/uploads/*
+!public/uploads/.gitkeep
+
+# Backups
+storage/backups/*
+!storage/backups/.gitkeep
+
+# Documents
+storage/documents/*
+!storage/documents/.gitkeep

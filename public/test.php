@@ -1,0 +1,2 @@
+<?php
+echo "PHP ROUTING TEST WORKS";
